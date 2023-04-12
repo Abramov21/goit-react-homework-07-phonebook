@@ -1,13 +1,7 @@
 import { useState } from 'react';
-// import { nanoid } from 'nanoid';
-// import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import s from './Form.module.css';
-// import { add } from 'components/Redux/contact/contactsSlice';
-import {
-  addContacts,
-  fetchContacts,
-} from 'components/Redux/contact/contactsOperations';
+import { addContacts } from 'components/Redux/contact/contactsOperations';
 import { nanoid } from '@reduxjs/toolkit';
 
 export const Form = () => {
@@ -38,9 +32,8 @@ export const Form = () => {
     }
 
     const newForm = { ...form, id: nanoid(3) };
-    // dispatch(add(newForm));
     dispatch(addContacts(newForm));
-    // dispatch(fetchContacts());
+
     resetForm();
   };
 
@@ -82,7 +75,3 @@ export const Form = () => {
     </form>
   );
 };
-
-// Form.propTypes = {
-//   onSubmit: PropTypes.func.isRequired,
-// };
