@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/goit-react-homework-07-phonebook/static/css/main.de8b3667.css",
-    "main.js": "/goit-react-homework-07-phonebook/static/js/main.4de20810.js",
+    "main.css": "/goit-react-homework-07-phonebook/static/css/main.ea505a76.css",
+    "main.js": "/goit-react-homework-07-phonebook/static/js/main.ebe65238.js",
     "index.html": "/goit-react-homework-07-phonebook/index.html",
-    "main.de8b3667.css.map": "/goit-react-homework-07-phonebook/static/css/main.de8b3667.css.map",
-    "main.4de20810.js.map": "/goit-react-homework-07-phonebook/static/js/main.4de20810.js.map"
+    "main.ea505a76.css.map": "/goit-react-homework-07-phonebook/static/css/main.ea505a76.css.map",
+    "main.ebe65238.js.map": "/goit-react-homework-07-phonebook/static/js/main.ebe65238.js.map"
   },
   "entrypoints": [
-    "static/css/main.de8b3667.css",
-    "static/js/main.4de20810.js"
+    "static/css/main.ea505a76.css",
+    "static/js/main.ebe65238.js"
   ]
 }
