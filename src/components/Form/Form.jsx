@@ -1,15 +1,21 @@
 import { useState } from 'react';
-import { nanoid } from 'nanoid';
+// import { nanoid } from 'nanoid';
 // import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import s from './Form.module.css';
-import { add } from 'components/Redux/contactsSlice';
+// import { add } from 'components/Redux/contact/contactsSlice';
+import {
+  addContacts,
+  fetchContacts,
+} from 'components/Redux/contact/contactsOperations';
+import { nanoid } from '@reduxjs/toolkit';
 
 export const Form = () => {
   const [form, setForm] = useState({
     name: '',
     number: '',
   });
+
   const dispatch = useDispatch();
   const contacts = useSelector(state => state?.contacts);
 
@@ -31,8 +37,10 @@ export const Form = () => {
       return alert(`${form.name}  is olrady in contacts`);
     }
 
-    const newForm = { ...form, id: nanoid(5) };
-    dispatch(add(newForm));
+    const newForm = { ...form, id: nanoid(3) };
+    // dispatch(add(newForm));
+    dispatch(addContacts(newForm));
+    // dispatch(fetchContacts());
     resetForm();
   };
 
