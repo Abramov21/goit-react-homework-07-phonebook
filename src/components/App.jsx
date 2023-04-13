@@ -12,10 +12,7 @@ export const App = () => {
       <Form />
       <Filter />
       {isLoading && <Loader />}
-      <PhoneBookList
-      // phoneList={filteredContacts}
-      // onDeletePhoneListItem={dispatch(remove(id))}
-      />
+      <PhoneBookList />
     </>
   );
 };

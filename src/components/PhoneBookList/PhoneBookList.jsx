@@ -1,7 +1,5 @@
-// import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import s from './PhoneBookList.module.css';
-// import { remove } from 'components/Redux/contact/contactsSlice';
 import { useEffect } from 'react';
 import {
   deleteContact,
@@ -19,7 +17,6 @@ const PhoneBookList = () => {
   );
 
   const dispatch = useDispatch();
-
   useEffect(() => {
     dispatch(fetchContacts());
   }, [dispatch]);
@@ -29,6 +26,7 @@ const PhoneBookList = () => {
       <ul className={s.contactList}>
         {filteredContacts.map(({ id, name, number }) => (
           <li className={s.item} key={id}>
+            {/* <p>{id}</p> */}
             <p>{name}:</p>
             <p className={s.number}>{number}</p>
             <button

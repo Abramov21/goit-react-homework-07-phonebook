@@ -48,6 +48,7 @@ export const contactsSlice = createSlice({
       .addCase(addContacts.fulfilled, (state, { payload }) => {
         state.isLoading = false;
         state.contacts.push(payload);
+        // state.isGet = !state.isGet;
       })
       .addCase(deleteContact.fulfilled, (state, { payload }) => {
         state.isLoading = false;

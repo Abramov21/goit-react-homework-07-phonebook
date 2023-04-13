@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import s from './Form.module.css';
 import { addContacts } from 'components/Redux/contact/contactsOperations';
-import { nanoid } from '@reduxjs/toolkit';
 
 export const Form = () => {
   const [form, setForm] = useState({
@@ -12,7 +11,6 @@ export const Form = () => {
 
   const dispatch = useDispatch();
   const contacts = useSelector(state => state?.contacts);
-
   const handleInputChange = event => {
     const { name, value } = event.target;
     setForm(prevState => {
@@ -31,8 +29,7 @@ export const Form = () => {
       return alert(`${form.name}  is olrady in contacts`);
     }
 
-    const newForm = { ...form, id: nanoid(3) };
-    dispatch(addContacts(newForm));
+    dispatch(addContacts(form));
 
     resetForm();
   };
